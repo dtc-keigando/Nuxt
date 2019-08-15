@@ -1,3 +1,4 @@
+import moment from '~/plugins/moment'
 export const state = () => ({
   users: [],
   userPosts: []
@@ -9,8 +10,12 @@ export const getters = {
 }
 
 export const mutations = {
+  setUser(state, { user }) {
+    state.user = user
+  },
   addUser(state, { user }) {
     state.users.push(user)
+    state.user = user
   },
   addUserPost(state, { user, post }) {
     state.userPosts[user.id].push(post)
@@ -26,15 +31,24 @@ export const actions = {
     commit('addUser',{user})
   },
   async addLikeLogToUser({ commit }, { user, post }) {
-    console.log('a')
+    console.log('user.likes=',user.likes)
+    // if (!user.likes)
+    //   user.likes = []
     user.likes.push({
       created_at: moment().format(),
-      user_id: user.id,
+      user_id: post.user.id,
       post_id: post.id
     })
-    console.log('uuuuu',user)
+    user.likes.push({
+      a: " ",
+      b: " "
+    }
+
+    )
+    // console.log(user)
     const newUser = await this.$axios.$put(`/users/${user.id}.json`, user)
-    commit('setUser', { post: newPost })
+    // console.log(newUser)
+    commit('setUser', { user: newUser })
   },
   async removeLikeLogToUser({ commit }, { user, post }) {
     post.likes = post.likes.filter(like => like.user_id !== user.id) || []

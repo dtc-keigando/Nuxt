@@ -5,11 +5,8 @@
   "author": "keigando",
   "private": true,
   "scripts": {
-    "dev": "nuxt",
-    "build": "nuxt build",
-    "start": "nuxt start",
-    "generate": "nuxt generate",
-    "lint": "eslint --ext .js,.vue --ignore-path .gitignore ."
+    "test": "jest",
+    "dev": "nuxt"
   },
   "lint-staged": {
     "*.{js,vue}": "eslint"
@@ -18,9 +15,6 @@
     "hooks": {
       "pre-commit": "lint-staged"
     }
-  },
-  "scripts": {
-    "test": "jest"
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.5.4",

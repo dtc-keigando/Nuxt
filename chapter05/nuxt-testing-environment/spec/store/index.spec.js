@@ -12,7 +12,7 @@ describe('store/index.js', () => {
   describe('mutations', () => {
     test('increment ミューテーションがコミットされると、 count ステートの値が +1 される)', () => {
       const store = new Vuex.Store(cloneDeep(index))
-      expect(store.getters['count']).toBe(0)
+      expect(store.getters['count']).toBe(1)
       store.commit('increment')
       expect(store.getters['count']).toBe(1)
     })

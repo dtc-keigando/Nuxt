@@ -26,11 +26,13 @@ export const mutations = {
 
 export const actions = {
   async login({ commit }, { id }) {
+    console.log('a')
     const user = await this.$axios.$get(`/users/${id}.json`)
     if (!user.id) throw new Error('Invalid user')
     commit('setUser', {user})
   },
   async register({ commit }, { id }) {
+    console.log('b')
     const payload = {}
     payload[id] = { id }
     await this.$axios.$patch(`/users.json`, payload)
@@ -39,16 +41,21 @@ export const actions = {
     commit('setUser', {user})
   },
   async addLikeLogToUser({ commit }, { user, post }) {
+    console.log('c')
     // console.log(user)
-    if (!user.likes)
-      user.likes = []
-    user.likes.push({
+    // if (!user.likes)
+    //   user.likes = []
+    var z = user.likes
+    console.log('before',z)
+    z.push({
       created_at: moment().format(),
-      user_id: user.id,
+      user_id: post.user.id,
       post_id: post.id
     })
+    user.likes = z
+    console.log('after',z)
     const newUser = await this.$axios.$put(`/users/${user.id}.json`, user)
-    commit('addUserPost',{user: newUser})
+    commit('setUser',{user: newUser})
   },
   async removeLikeLogToUser({ commit }, { user, post }) {
     user.likes = post.likes.filter(like => like.user_id !== user.id) || []
