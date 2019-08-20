@@ -1,8 +1,8 @@
 Arguments: 
-  /Users/keigando/.nodebrew/node/v12.7.0/bin/node /Users/keigando/.nodebrew/current/bin/yarn add moment lodash.clonedeep
+  /Users/keigando/.nodebrew/node/v12.7.0/bin/node /Users/keigando/.nodebrew/current/bin/yarn add -D vue-jest
 
 PATH: 
-  /Users/keigando/.nodebrew/current/bin:/Users/keigando/.nodebrew/current/bin:/Users/keigando/.nodebrew/current/bin:/Users/keigando/.nodebrew/current/bin:/Users/keigando/.nodebrew/current/bin:/Users/keigando/.nodebrew/current/bin:/Users/keigando/.nodebrew/current/bin:/Users/keigando/.nodebrew/current/bin:/Users/keigando/.pyenv/shims:/Users/keigando/.pyenv/bin:/Library/Frameworks/Python.framework/Versions/3.7.4/bin:/Library/Frameworks/Python.framework/Versions/3.7/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/share/dotnet:~/.dotnet/tools:/Library/Frameworks/Mono.framework/Versions/Current/Commands:/Applications/Xamarin Workbooks.app/Contents/SharedSupport/path-bin:/Users/keigando/.nodebrew/current/bin
+  /Users/keigando/.nodebrew/current/bin:/Users/keigando/.nodebrew/current/bin:/Users/keigando/.nodebrew/current/bin:/Users/keigando/.nodebrew/current/bin:/Users/keigando/.nodebrew/current/bin:/Users/keigando/.nodebrew/current/bin:/Users/keigando/.nodebrew/current/bin:/Users/keigando/.nodebrew/current/bin:/Users/keigando/.nodebrew/current/bin:/Users/keigando/.nodebrew/current/bin:/Users/keigando/.nodebrew/current/bin:/Users/keigando/.pyenv/shims:/Users/keigando/.pyenv/bin:/Library/Frameworks/Python.framework/Versions/3.7.4/bin:/Library/Frameworks/Python.framework/Versions/3.7/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/share/dotnet:~/.dotnet/tools:/Library/Frameworks/Mono.framework/Versions/Current/Commands:/Applications/Xamarin Workbooks.app/Contents/SharedSupport/path-bin:/Users/keigando/.nodebrew/current/bin
 
 Yarn version: 
   1.17.3
@@ -14,7 +14,7 @@ Platform:
   darwin x64
 
 Trace: 
-  Error: https://registry.yarnpkg.com/moment: ETIMEDOUT
+  Error: https://registry.yarnpkg.com/vue-jest: ETIMEDOUT
       at Timeout._onTimeout (/Users/keigando/.nodebrew/node/v12.7.0/lib/node_modules/yarn/lib/cli.js:141124:19)
       at listOnTimeout (internal/timers.js:531:17)
       at processTimers (internal/timers.js:475:7)
